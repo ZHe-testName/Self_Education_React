@@ -1,4 +1,5 @@
 import './App.css';
+import AdvancedCounter from './components/advancedCounter/AdvancedCounter';
 import ClikCounter from './components/clik_counter/ClickCounter';
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
 
         <hr/>
 
-        
+        <AdvancedCounter/>
+
+        <hr />
     </div>
   );
 }

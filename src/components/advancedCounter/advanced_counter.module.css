@@ -1,0 +1,19 @@
+.advanced{
+    margin: 0px auto;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+    .advanced > div{
+        padding-bottom: 20px;
+    }
+
+        .advanced > div > button{
+            width: 35%;
+        }
+
+        .advanced > div > button:first-of-type{
+            margin-right: 15px;
+        }
