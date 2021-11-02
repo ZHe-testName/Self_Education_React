@@ -1,0 +1,21 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(157, 232, 235);
+}
+
+    .form > input{
+        margin-bottom: 10px;
+        padding: 10px
+    }
+
+    .form > button{
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 186px;
+        cursor: pointer;
+        background-color: rgb(19, 91, 94);
+    }
