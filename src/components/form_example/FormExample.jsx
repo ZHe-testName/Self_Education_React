@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useRef } from "react";
 
 import c from './form_example.module.css';
 
@@ -70,6 +70,41 @@ function Form (){
                     placeholder="Your password"
                     value={fields.password}
                     onChange={onChangeHandler} />
+
+                <button>Send</button>
+        </form>
+    );
+};
+
+//Вариант с неконтролируемой формой с сипользованием useRef
+function WithRefForm (){
+    const emailRef = useRef();
+    const passwordRef = useRef();
+
+    const onSubmitHandler = e => {
+        e.preventDefault();
+
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+
+        console.dir({'email': email, 'password': password});
+    };
+
+    return (
+        <form 
+            className={c.form}
+            onSubmit={onSubmitHandler}>
+                <input 
+                    ref={emailRef}
+                    type="text"
+                    name="email"
+                    placeholder="Your email" />
+
+                <input 
+                    ref={passwordRef}
+                    type="text"
+                    name="password"
+                    placeholder="Your password" />
 
                 <button>Send</button>
         </form>

@@ -2,6 +2,7 @@ import './App.css';
 import AdvancedCounter from './components/advanced_counter/AdvancedCounter';
 import ClikCounter from './components/clik_counter/ClickCounter';
 import Component from './components/custom_hook/CustomHook';
+import WithRefForm from './components/form_example/FormExample';
 import Form from './components/form_example/FormExample';
 import TimerWithRef from './components/timer_with_ref/TimerWithRef';
 import UseCallbackExample from './components/use_callback_example/UseCallbackExample';
