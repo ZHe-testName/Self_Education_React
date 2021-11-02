@@ -4,6 +4,8 @@ import ClikCounter from './components/clik_counter/ClickCounter';
 import Component from './components/custom_hook/CustomHook';
 import WithRefForm from './components/form_example/FormExample';
 import Form from './components/form_example/FormExample';
+import UsersList from './components/lists/UsersList';
+import Wrapper from './components/memo/Memo';
 import TimerWithRef from './components/timer_with_ref/TimerWithRef';
 import UseCallbackExample from './components/use_callback_example/UseCallbackExample';
 import UseMemoExample from './components/use_memo_example/UseMemoExample';
@@ -36,6 +38,14 @@ function App() {
         <hr />
 
         <Form />
+
+        <hr />
+
+        <UsersList />
+
+        <hr />
+
+        <Wrapper />
     </div>
   );
 }

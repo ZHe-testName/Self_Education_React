@@ -8,7 +8,9 @@
 
     .form > input{
         margin-bottom: 10px;
-        padding: 10px
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
     }
 
     .form > button{
@@ -18,4 +20,5 @@
         width: 186px;
         cursor: pointer;
         background-color: rgb(19, 91, 94);
+        border-radius: 5px;
     }

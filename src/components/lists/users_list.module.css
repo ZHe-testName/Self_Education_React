@@ -1,0 +1,16 @@
+ul{
+    list-style-type: none;
+    padding: 0px;
+    width: 100%;
+}
+
+ ul > li{
+     display: flex;
+     justify-content: space-between;
+     width: 300px;
+     margin: 0px auto;
+     margin-bottom: 5px;
+     background-color: chocolate;
+     padding: 0px 20px;
+     border-radius: 5px;
+ }
