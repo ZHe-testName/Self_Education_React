@@ -1,5 +1,6 @@
 import './App.css';
 import AdvancedCounter from './components/advanced_counter/AdvancedCounter';
+import Classes from './components/classes_component/ClassesComponent';
 import ClikCounter from './components/clik_counter/ClickCounter';
 import Component from './components/custom_hook/CustomHook';
 import WithRefForm from './components/form_example/FormExample';
@@ -46,6 +47,10 @@ function App() {
         <hr />
 
         <Wrapper />
+
+        <hr />
+
+        <Classes />
     </div>
   );
 }
