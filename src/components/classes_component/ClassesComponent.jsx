@@ -224,7 +224,7 @@ class Pure extends React.PureComponent {
 //наследовать нужно от React.Component
 //но использовать метод жизненного цыкла
 //shouldComponentUpdate()
-class ControledPureComponent extends React.ClassComponent {
+class ControledPureComponent extends React.Component {
     //этот метод вызывается перед рендером компонента
     //и если возвращается true то реакт НЕ отрендерит компонент
     //и принимает следующие пропсы и следующий стейт

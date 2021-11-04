@@ -5,6 +5,7 @@ import ClikCounter from './components/clik_counter/ClickCounter';
 import Component from './components/custom_hook/CustomHook';
 import WithRefForm from './components/form_example/FormExample';
 import Form from './components/form_example/FormExample';
+import ShowFrame from './components/hoc/HOC';
 import UsersList from './components/lists/UsersList';
 import Wrapper from './components/memo/Memo';
 import TimerWithRef from './components/timer_with_ref/TimerWithRef';
@@ -51,6 +52,10 @@ function App() {
         <hr />
 
         <Classes />
+
+        <hr />
+
+        <ShowFrame />
     </div>
   );
 }
