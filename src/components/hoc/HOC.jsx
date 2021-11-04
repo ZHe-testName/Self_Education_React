@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 //HOC(High Order Component) это компоненты высшего порядка
 //Они принимают на входе компоненту возвращают новую
@@ -53,6 +53,50 @@ function withWindowSize (Component){
     };
 };
 
+//в учебнике почемуто утверждают что ХОК-и только для классовых компонент
+
+//для функционадьных нужно использовать ХУК-и
+//как сдесь...
+function UseScreenSizeWrapp (){
+    const [state, setState] = useState({
+        width: Math.trunc(window.innerWidth / 6),
+        height: Math.trunc(window.innerHeight / 6),
+    });
+
+    useEffect (() => {
+        const handler = () => {
+            setState({   
+                width: Math.trunc(window.innerWidth / 6),
+                height: Math.trunc(window.innerHeight / 6),
+            })
+        };
+
+        window.addEventListener('resize', handler);
+
+        return () => {
+            window.removeEventListener('resize', handler);
+        };
+    }, []);
+
+    return state;
+};
+
+const FunctionWrappedComp = () => {
+    const {width, height} = UseScreenSizeWrapp();
+        
+        return (
+            <div
+                style={{
+                    width: width + 'px',
+                    height: height + 'px',
+                    backgroundColor: '#20bed7',
+                    fontSize: '26px',
+                }}>
+                    I'm Function Component!
+            </div>
+        );
+};
+
 class CompA extends React.Component {
     render (){
         const {width, height} = this.props;
@@ -90,15 +134,17 @@ class CompB extends React.Component {
 };
 
 //мы просто вызываем их а отдаем а них пропсы
-const WrappedCompA = withWindowSize (CompA);
-const WrappedCompB = withWindowSize (CompB);
+// const WrappedCompA = withWindowSize (CompA);
+// const WrappedCompB = withWindowSize (CompB);
+
 
 function ShowFrame (){
     //и вызываем их
     return (
         <div>
-            <WrappedCompA />
-            <WrappedCompB />
+            {/* <WrappedCompA />
+            <WrappedCompB /> */}
+            <FunctionWrappedComp />
         </div>
     );
 };
